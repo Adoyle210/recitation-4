@@ -7,6 +7,7 @@
 #include <stdlib.h>
 
 #include "list.h"
+#include "assert.h"
 
 /*
  * This structure is used to represent a single link in a singly-linked list.
