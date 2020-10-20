@@ -51,3 +51,26 @@ struct list* list_setup() {
   list->head = next;
   return list;
 }
+
+struct list_it{ //added struct for iterator
+  struct link* curr;
+} 
+
+//added iterator function
+struct list_it* list_it_setup(struct list* list){
+  assert(list); //adding iterator for list 
+  struct list_it* iter = malloc(size of(struct list_it)); //requesting mem for iter
+  iter->curr = list->head; //set curr to head
+  return iter;
+}
+int list_it_get_next(struct list_iterstor *iter){
+  assert(iter); //adding iterator for iter
+  return iter->curr != NULL;
+}
+int list_it_next(struct list_iterstor *iter){
+  assert(iter);
+  assert(iter->curr);
+  int val = iter->curr->val;
+  iter->curr = iter->curr->next;
+  return val;
+}
