@@ -8,7 +8,13 @@
 #define __LIST_H
 
 struct list;
+struct list_it; //added struct for iterator
 
 struct list* list_setup();
+
+//added iterator function
+struct list_it* list_it_setup(struct list* list);
+int list_it_get_next(struct list_iterstor *iter);
+int list_it_next(struct list_iterstor *iter);
 
 #endif
