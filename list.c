@@ -60,7 +60,7 @@ struct list_it{ //added struct for iterator
 //added iterator function
 struct list_it* list_it_setup(struct list* list){
   assert(list); //adding iterator for list 
-  struct list_it* iter = malloc(size of(struct list_it)); //requesting mem for iter
+  struct list_it* iter = malloc(sizeof(struct list_it)); //requesting mem for iter
   iter->curr = list->head; //set curr to head
   return iter;
 }
