@@ -55,7 +55,7 @@ struct list* list_setup() {
 
 struct list_it{ //added struct for iterator
   struct link* curr;
-} 
+};
 
 //added iterator function
 struct list_it* list_it_setup(struct list* list){
@@ -64,11 +64,11 @@ struct list_it* list_it_setup(struct list* list){
   iter->curr = list->head; //set curr to head
   return iter;
 }
-int list_it_get_next(struct list_iterstor *iter){
+int list_it_get_next(struct list_it *iter){
   assert(iter); //adding iterator for iter
   return iter->curr != NULL;
 }
-int list_it_next(struct list_iterstor *iter){
+int list_it_next(struct list_it *iter){
   assert(iter);
   assert(iter->curr);
   int val = iter->curr->val;

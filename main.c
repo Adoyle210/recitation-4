@@ -21,7 +21,7 @@ int main() {
     /*
      * The next two lines each generate a compiler error.
      */
-    printf("== list[%2d]: %d\n", i, list_iterator_next(iter));
+    printf("== list[%2d]: %d\n", i, list_it_next(iter));
     //curr = curr->next;
     i++;
   }
